@@ -1,0 +1,206 @@
+%section.stylesheets
+  .result-bg
+    .icon
+      .circle
+        %span W
+  .box-wrapper
+    .long-arrow.css
+    .item-wrapper
+      .clips.left.green
+      .clips.right.green
+      %section.green-box.css
+        %header 
+          %h1 Sass
+        .content.green
+          %nav
+            %ul
+              %li.first-link.active style.css.sass
+              %li.second-link _mixins.css.sass
+          .code-area
+            %span.first.active
+              %pre
+                = preserve do
+                  :escaped
+                    @import "mixins"
+                    .result-bg
+                      background-color: $yellow
+                      width: 120px
+                      height: 120px
+                      margin: 0 auto
+                      border: 2px solid white
+                      border-radius: 5px
+                      +browser-prefix(box-shadow, 0 0 3px #ABABAB)
+                      .icon
+                        height: 100px
+                        width: 100px
+                        border-radius: 50%
+                        background-color: $light-yellow
+                        border: 5px dotted $brown
+                        margin: 5px auto 0 auto
+                        +browser-prefix(box-shadow, 0 0 12px #000000)
+                        .circle
+                          width: 60px
+                          height: 60px
+                          margin: 20px auto 0 auto
+                          background-color: $brown
+                          border-radius: 50%
+                          > span
+                            display: block
+                            text-align: center
+                            font-family: $merienda
+                            font-size: 24px
+                            color: $light-yellow
+                            height: 60px
+                            line-height: 60px
+            %span.second
+              %pre
+                = preserve do
+                  :escaped
+                    $brown: #6F5A42
+                    $yellow: #E7AE00
+                    $light-yellow: #FAF6C4
+                    $merienda: 'Merienda One', cursive
+
+                    =browser-prefix($name, $argument)
+                      #{$name}: $argument
+                      -webkit-#{$name}: $argument
+                      -ms-#{$name}: $argument
+                      -moz-#{$name}: $argument
+                      -o-#{$name}: $argument
+          .sign-amount
+            Ilość znaków: 745
+        %footer.green
+          .green-arrow
+    .item-wrapper.blue
+      .clips.left.blue
+      .clips.right.blue
+      %section.blue-box.css
+        %header
+          %h1 Css
+        .content.blue
+          %nav
+            %ul
+              %li.active style.css
+          .code-area
+            %span.active
+              %pre
+                = preserve do
+                  :escaped
+                    .result-bg {
+                      background-color: #e7ae00;
+                      width: 120px;
+                      height: 120px;
+                      margin: 0 auto;
+                      border: 2px solid white;
+                      border-radius: 5px;
+                      box-shadow: 0 0 3px #ababab;
+                      -webkit-box-shadow: 0 0 3px #ababab;
+                      -ms-box-shadow: 0 0 3px #ababab;
+                      -moz-box-shadow: 0 0 3px #ababab;
+                      -o-box-shadow: 0 0 3px #ababab;
+                    }
+                    .result-bg .icon {
+                      height: 100px;
+                      width: 100px;
+                      border-radius: 50%;
+                      background-color: #faf6c4;
+                      border: 5px dotted #6f5a42;
+                      margin: 5px auto 0 auto;
+                      box-shadow: 0 0 12px black;
+                      -webkit-box-shadow: 0 0 12px black;
+                      -ms-box-shadow: 0 0 12px black;
+                      -moz-box-shadow: 0 0 12px black;
+                      -o-box-shadow: 0 0 12px black;
+                    }
+                    .result-bg .icon .circle {
+                      width: 60px;
+                      height: 60px;
+                      margin: 20px auto 0 auto;
+                      background-color: #6f5a42;
+                      border-radius: 50%;
+                    }
+                    .result-bg .icon .circle > span {
+                      display: block;
+                      text-align: center;
+                      font-family: "Merienda One", cursive;
+                      font-size: 24px;
+                      color: #faf6c4;
+                      height: 60px;
+                      line-height: 60px;
+                    }
+          .sign-amount
+            Ilość znaków: 783
+        %footer.blue
+          .blue-arrow
+    .item-wrapper.violet
+      .clips.left.violet
+      .clips.right.violet
+      %section.violet-box 
+        %header
+          %h1 Scss
+        .content.violet
+          %nav
+            %ul
+              %li.first-link.active style.css.scss
+              %li.second-link _mixins.css.scss
+          .code-area
+            %span.first.active
+              %pre
+                = preserve do
+                  :escaped
+                    @import "mixins"
+                    .result-bg {
+                      background-color: $yellow;
+                      width: 120px;
+                      height: 120px;
+                      margin: 0 auto;
+                      border: 2px solid white;
+                      border-radius: 5px;
+                      @include browser-prefix(box-shadow, 0 0 3px #ABABAB);
+                      .icon {
+                        height: 100px;
+                        width: 100px;
+                        border-radius: 50%;
+                        background-color: $light-yellow;
+                        border: 5px dotted $brown;
+                        margin: 5px auto 0 auto;
+                        @include browser-prefix(box-shadow, 0 0 12px #000000);
+                        .circle {
+                          width: 60px;
+                          height: 60px;
+                          margin: 20px auto 0 auto;
+                          background-color: $brown;
+                          border-radius: 50%;
+                          span {
+                            display: block;
+                            text-align: center;
+                            font-family: $merienda;
+                            font-size: 24px;
+                            color: $light-yellow;
+                            height: 60px;
+                            line-height: 60px;
+                          }
+                        }
+                      }
+                    }
+            %span.second
+              %pre
+                = preserve do
+                  :escaped
+                    $brown: #6F5A42;
+                    $yellow: #E7AE00;
+                    $light-yellow: #FAF6C4;
+                    $merienda: 'Merienda One', cursive;
+
+                    @mixin browser-prefix($name, $argument) {
+                      #{$name}: $argument;
+                      -webkit-#{$name}: $argument;
+                      -ms-#{$name}: $argument;
+                      -moz-#{$name}: $argument;
+                      -o-#{$name}: $argument;
+                    }
+          .sign-amount
+            Ilość znaków: 808
+        %footer.violet
+          .violet-arrow
+.clearfix

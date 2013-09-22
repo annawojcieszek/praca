@@ -1,0 +1,32 @@
+$green: #96BA5A
+$blue: #4BC1DD
+$violet: #AC72BA
+$light-white: rgba(255,255,255,0.3)
+$brown: #6F5A42
+$yellow: #E7AE00
+$light-yellow: #FAF6C4
+$merienda: 'Merienda One', cursive
+$PT: 'PT Mono', sans-serif
+$openSans: 'Open Sans', sans-serif
+
+=browser-prefix($name, $argument)
+  #{$name}: $argument
+  -webkit-#{$name}: $argument
+  -ms-#{$name}: $argument
+  -moz-#{$name}: $argument
+  -o-#{$name}: $argument
+  
+=linear-gradient($fromColor, $toColor) 
+  background-color: $toColor
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor))
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor)
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor)
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor)
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor)
+  background-image:         linear-gradient(top, $fromColor, $toColor)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}')
+  
+=unstyled-list
+  margin: 0
+  padding: 0
+  list-style: none

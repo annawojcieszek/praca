@@ -1,0 +1,155 @@
+%section.hypertext
+  %header.main-header
+    .logo Logo
+    %nav
+      %ul
+        %li.example-link= link_to "Home", "#"
+        %li.example-link= link_to "Aktualności", "#"
+        %li.example-link= link_to "Oferta", "#"
+        %li.example-link= link_to "Galeria", "#"
+        %li.example-link= link_to "Księga gości", "#"
+        %li.example-link= link_to "Kontakt", "#"
+    
+  .box-wrapper
+    .long-arrow.html
+    .item-wrapper
+      .clips.left.green
+      .clips.right.green
+      %section.green-box.html
+        %header 
+          %h1 Erb
+        .content.green
+          %nav
+            %ul
+              %li.sass-link.active strona.html.erb
+          .code-area
+            %span.sass.active
+              %pre
+                = preserve do
+                  :escaped
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                      <title>Przyklad</title>
+                      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+                      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+                      <%= csrf_meta_tags %>
+                    </head>
+                    <body>
+                      <header class="main-header">
+                        <div class="logo">
+                          Logo
+                        </div>
+                        <nav>
+                          <ul>
+                            <li> 
+                              <%= link_to "Home", "#" %>
+                            </li>
+                            <li>
+                              <%= link_to "Aktualności", "#" %>
+                            </li>
+                            <li>
+                              <%= link_to "Oferta", "#" %>
+                            </li>
+                            <li>
+                              <%= link_to "Galeria", "#" %>
+                            </li>
+                            <li>
+                              <%= link_to "Księga gości", "#" %>
+                            </li>
+                            <li>
+                              <%= link_to "Kontakt", "#" %>
+                            </li>
+                          </ul>
+                        </nav>
+                      </header>
+                    </body>
+                    </html>
+          .sign-amount
+            Ilość znaków: 535
+        %footer.green
+          .green-arrow
+    .item-wrapper.blue
+      .clips.left.blue
+      .clips.right.blue
+      %section.blue-box.html
+        %header
+          %h1 Haml
+        .content.blue
+          %nav
+            %ul
+              %li.active strona.html.haml
+          .code-area
+            %span.active
+              %pre
+                = preserve do
+                  :escaped
+                    !!! 5
+                    %html
+                    %head
+                      %title Strona
+                      = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+                      = javascript_include_tag "application", "data-turbolinks-track" => true
+                      = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Merienda+One'
+                      = csrf_meta_tags
+
+                    %body
+                      %header.main-header
+                        .logo Logo
+                        %nav
+                          %ul
+                            %li= link_to "Home", "#"
+                            %li= link_to "Aktualności", "#"
+                            %li= link_to "Oferta", "#"
+                            %li= link_to "Galeria", "#"
+                            %li= link_to "Księga gości", "#"
+                            %li= link_to "Kontakt", "#"
+          .sign-amount
+            Ilość znaków: 443
+        %footer.blue
+          .blue-arrow
+    .item-wrapper.violet
+      .clips.left.violet
+      .clips.right.violet
+      %section.violet-box 
+        %header
+          %h1 Slim
+        .content.violet
+          %nav
+            %ul
+              %li.active strona.html.slim
+          .code-area
+            %span.active
+              %pre
+                = preserve do
+                  :escaped
+                    doctype html
+                    html
+                      head
+                        title Przyklad
+                        = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+                        = javascript_include_tag "application", "data-turbolinks-track" => true
+                        = csrf_meta_tags
+                      body
+                        header.main-header
+                          .logo
+                            | Logo 
+                          nav
+                            ul
+                              li
+                                = link_to "Home", "#"
+                              li
+                                = link_to "Aktualności", "#"
+                              li
+                                = link_to "Oferta", "#"
+                              li
+                                = link_to "Galeria", "#"
+                              li
+                                = link_to "Księga gości", "#"
+                              li
+                                = link_to "Kontakt", "#"
+          .sign-amount
+            Ilość znaków: 367
+        %footer.violet
+          .violet-arrow
+.clearfix

@@ -1,0 +1,34 @@
+@import "mixins"
+
+.result-bg
+  background-color: $yellow
+  width: 120px
+  height: 120px
+  margin: 0 auto
+  border: 2px solid white
+  border-radius: 5px
+  +browser-prefix(box-shadow, 0 0 3px #ABABAB)
+  position: relative
+  .icon
+    height: 100px
+    width: 100px
+    border-radius: 50%
+    background-color: $light-yellow
+    border: 5px dotted $brown
+    margin: 5px auto 0 auto
+    +browser-prefix(box-shadow, 0 0 12px #000000)
+    .circle
+      width: 60px
+      height: 60px
+      margin: 20px auto 0 auto
+      background-color: $brown
+      border-radius: 50%
+      > span
+        display: block
+        text-align: center
+        font-family: $merienda
+        font-size: 24px
+        color: $light-yellow
+        height: 60px
+        line-height: 60px
+    

@@ -1,0 +1,60 @@
+@import "mixins"
+
+section.hypertext
+  header.main-header
+    +linear-gradient($yellow, #F4CC5D)
+    height: 80px
+    position: relative
+    +browser-prefix(border-radius, 2px)
+    background-image: url("squares-bg.png")
+    .logo
+      font-family: $merienda
+      font-size: 40px
+      color: white
+      +browser-prefix(text-shadow, 1px 1px 3px #414141)
+      margin-left: 100px
+      position: relative
+      height: 80px
+      line-height: 80px
+      &:before
+        content: ""
+        position: absolute
+        left: -50px
+        width: 40px
+        height: 40px
+        top: 15px
+        border-radius: 50%
+        background-color: $brown
+        +browser-prefix(box-shadow, 1px 1px 3px #414141)
+      &:after
+        content: ""
+        position: absolute
+        left: -25px
+        top: 30px
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        background-color: white
+        +browser-prefix(box-shadow, 1px 1px 3px #414141)
+    nav
+      display: inline-block
+      margin: 0 auto
+      position: absolute
+      top: 50%
+      right: 30px
+      >ul
+        +unstyled-list
+        >li
+          display: inline-block
+          padding: 5px 10px
+          margin: 0 5px
+          &:hover
+            background-color: $brown
+            border-radius: 2px
+            a
+              color: rgba(255,255,255,0.9)
+          >a
+            text-decoration: none
+            color: $brown
+            text-transform: uppercase
+            

@@ -1,0 +1,15 @@
+!!! 5
+%html
+%head
+  %title Praca magisterska
+  = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+  = javascript_include_tag "application", "data-turbolinks-track" => true
+  = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Merienda+One'
+  = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=PT+Mono'
+  = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300&subset=latin,latin-ext'
+  = csrf_meta_tags
+
+%body
+
+  = yield
+

@@ -1,0 +1,184 @@
+@import "mixins"
+
+body
+  font-family: $openSans
+.clearfix
+  clear: both
+  
+section.javascripts, section.stylesheets, section.hypertext
+  height: 760px
+  width: 960px
+  margin: 0 auto
+  padding: 60px 0
+  
+nav.fixed-navigation
+  position: fixed
+  top: 40px
+  z-index: 4
+  > ul
+    +unstyled-list
+    > li
+      background-color: #CACACA
+      margin: 5px 0
+      +browser-prefix(border-radius, 0 6px 6px 0)
+      border: 2px solid white
+      +browser-prefix(box-shadow, 0 0 3px #ABABAB)
+      &:hover
+        background-color: $yellow
+      &.active
+        background-color: $brown
+      a
+        color: white
+        padding: 10px 20px
+        text-decoration: none
+        display: block
+        +browser-prefix(text-shadow, 1px 1px 3px #7e7e7e)
+        font-family: $merienda
+        font-size: 20px
+      
+    
+
+.box-wrapper
+  margin: 100px auto
+  width: 960px
+  position: relative
+  &:before, &:after
+    content: ""
+    background-image: url("yellow-arrows-sprite.png")
+    height: 70px
+    width: 195px
+    position: absolute
+    top: -80px
+  &:after
+    background-position: -195px 0
+    right: 250px
+  &:before
+    background-position: 0 0
+    left: 250px
+  .long-arrow
+    position: absolute
+    left: 50%
+    margin-left: -11px
+    top: -80px
+    background-image: url("long-yellow-arrow.png")
+    width: 22px
+    height: 262px
+    &.longer
+      background-image: url("longer-yellow-arrow.png")
+      width: 22px
+      height: 545px
+      
+  header > h1
+    display: block
+    text-align: center
+    +browser-prefix(text-shadow, 1px 1px 3px #414141)
+    font-family: $merienda
+    color: white
+    font-size: 28px
+    margin: 9px 0 0 0
+    position: relative
+  .content
+    opacity: 0
+    +browser-prefix(transition, opacity 0.5s)
+    &.active
+      opacity: 1
+      +browser-prefix(transition, opacity 1.5s)
+  .item-wrapper
+    position: relative
+    display: inline-block
+    float: left
+    &.blue
+      margin-left: 40px
+    &.violet
+      margin: 77px 0 0 250px
+    .clips
+      position: absolute
+      z-index: 2
+      width: 40px
+      height: 70px
+      +browser-prefix(border-radius, 20px)
+      top: -35px
+      border: 5px solid white
+      +browser-prefix(box-shadow, 0 0 3px #ABABAB)
+      &.left
+        left: 50px
+      &.right
+        right: 50px
+      &.green
+        background-color: $green
+      &.blue
+        background-color: $blue
+      &.violet
+        background-color: $violet
+  .sign-amount
+    margin-left: 10px
+    color: white
+    font-weight: 300
+    letter-spacing: 1px
+  
+  footer
+    position: absolute
+    bottom: 0
+    background-color: red
+    height: 40px
+    width: 100%
+    +linear-gradient($light-white, transparent)
+    .green-arrow, .blue-arrow, .violet-arrow
+      background-image: url("arrows-sprite.png")
+      background-position: 0 0
+      width: 55px
+      height: 36px
+      margin: 0 auto
+      &:hover
+        background-position: -54px 0
+      &.active
+        background-position: 0 36px
+        &:hover
+          background-position: -54px 36px
+  nav
+    margin: 40px 10px 0 10px
+    width: 430px
+    border-radius: 5px 5px 0 0
+    > ul
+      +unstyled-list
+      > li
+        display: inline-block
+        background-color: rgba(255,255,255,0.5)
+        padding: 10px 24px
+        border-radius: 5px 5px 0 0
+        font-size: 12px
+        &.active
+          background-color: white
+  .code-area
+    margin: 0 10px 10px 10px
+    padding: 10px
+    background-color: white
+    border-radius: 0 5px 5px 5px
+    font-family: $PT
+    font-size: 12px
+    overflow: auto
+    height: 160px
+    span
+      display: none
+      &.active
+        display: block
+  .green-box, .blue-box, .violet-box
+    z-index: 1
+    display: inline-block
+    overflow: hidden
+    width: 450px
+    +browser-prefix(border-radius, 10px)
+    position: relative
+    height: 100px
+    border: 5px solid white
+    +browser-prefix(box-shadow, 0 0 3px #ABABAB)
+    +browser-prefix(transition, height 0.5s ease-in)
+    &.active
+      height: 400px
+      +browser-prefix(transition, height 0.5s ease-out)
+  .green-box
+    background-color: $green
+  .blue-box
+    background-color: $blue
+  .violet-box
+    background-color: $violet
